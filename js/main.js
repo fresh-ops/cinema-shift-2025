@@ -1,5 +1,5 @@
 function main() {
-    setDesktopHeader();
+    setMobileHeader();
 }
 
 main();

@@ -17,6 +17,15 @@ function buildDesktopHeader() {
     return desktopHeader;
 }
 
+function buildMobileHeader() {
+    const mobileHeader = document.createElement('div');
+    mobileHeader.innerHTML = `
+        <h1>Афиша</h1>
+    `;
+
+    return mobileHeader;
+}
+
 function removeHeader() {
     const header = document.querySelector('header');
     header.children[0]?.remove();
@@ -26,4 +35,10 @@ function setDesktopHeader() {
     removeHeader();
     const header = document.querySelector('header');
     header.append(buildDesktopHeader());
+}
+
+function setMobileHeader() {
+    removeHeader();
+    const header = document.querySelector('header');
+    header.append(buildMobileHeader());
 }
