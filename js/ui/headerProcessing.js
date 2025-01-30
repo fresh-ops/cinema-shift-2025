@@ -43,17 +43,10 @@ function setMobileHeader() {
     header.append(buildMobileHeader());
 }
 
-function setUpHeader() {
+function changeHeader() {
     if (window.innerWidth < 768) {
         setMobileHeader();
     } else {
         setDesktopHeader();
     }
-    window.addEventListener('resize', () => {
-        if (window.innerWidth < 768) {
-            setMobileHeader();
-        } else {
-            setDesktopHeader();
-        }
-    });
 }
