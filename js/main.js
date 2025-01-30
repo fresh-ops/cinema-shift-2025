@@ -1,5 +1,5 @@
 function main() {
-    setMobileHeader();
+    setUpHeader();
 }
 
 main();

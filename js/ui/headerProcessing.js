@@ -42,3 +42,18 @@ function setMobileHeader() {
     const header = document.querySelector('header');
     header.append(buildMobileHeader());
 }
+
+function setUpHeader() {
+    if (window.innerWidth < 768) {
+        setMobileHeader();
+    } else {
+        setDesktopHeader();
+    }
+    window.addEventListener('resize', () => {
+        if (window.innerWidth < 768) {
+            setMobileHeader();
+        } else {
+            setDesktopHeader();
+        }
+    });
+}
