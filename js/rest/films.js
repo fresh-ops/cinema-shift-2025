@@ -11,3 +11,7 @@ async function getFilmById(id) {
     const data = await response.json();
     return data['film'];
 }
+
+function getUrlOfFilmImg(film) {
+    return API_URL + film.img;
+}

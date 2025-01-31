@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", serif;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+#poster {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.card-title {
+    display: block;
+    height: 1.5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-preview {
+    height: 200px;
+    position: relative;
+    border-radius: 5px;
+}
+
+.card-preview-genre {
+    width: 45%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-radius: 5px 0 0 0;
+    font-size: 12px;
+    text-align: center;
+    background: #F5F5F8;
+}
+
+.card-button {
+    width: 100%;
+    background: #9534D2;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 8px 0;
+}
