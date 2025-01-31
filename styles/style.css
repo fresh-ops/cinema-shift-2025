@@ -12,7 +12,6 @@ main {
 #poster {
     width: 80%;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
     gap: 16px;
 }
 
@@ -35,7 +34,7 @@ main {
     bottom: 0;
     right: 0;
     border-radius: 5px 0 0 0;
-    font-size: 12px;
+    font-size: 0.75em;
     text-align: center;
     background: #F5F5F8;
 }
@@ -47,4 +46,28 @@ main {
     border-radius: 5px;
     color: white;
     padding: 8px 0;
+}
+
+@media screen and (min-width: 1200px) {
+    #poster {
+        grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    #poster {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    #poster {
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #poster {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
 }
