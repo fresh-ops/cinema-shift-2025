@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: "Inter", serif;
     box-sizing: border-box;
 }
 
@@ -10,8 +11,11 @@ header {
     width: 100%;
     display: flex;
     justify-content: center;
+    margin-bottom: 20px;
     padding: 20px 0;
-    position: fixed;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     background: white;
 }
 
@@ -24,8 +28,70 @@ header>div {
     gap: 32px;
 }
 
-#container {
+main {
+    display: flex;
+    justify-content: center;
+}
+
+#poster {
     width: 80%;
-    height: 100000px;
-    background: royalblue;
+    display: grid;
+    gap: 16px;
+}
+
+.card-title {
+    display: block;
+    height: 1.5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-preview {
+    height: 200px;
+    position: relative;
+    border-radius: 5px;
+}
+
+.card-preview-genre {
+    width: 45%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-radius: 5px 0 0 0;
+    font-size: 0.75em;
+    text-align: center;
+    background: #F5F5F8;
+}
+
+.card-button {
+    width: 100%;
+    background: #9534D2;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 8px 0;
+}
+
+@media screen and (min-width: 1200px) {
+    #poster {
+        grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    #poster {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    #poster {
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #poster {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
 }
