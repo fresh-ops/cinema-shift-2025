@@ -1,0 +1,22 @@
+header {
+    border-bottom: 1px solid #CED2DA;
+}
+
+.header-menu {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.header-menu-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.header-menu-item>a {
+    font-family: "Inter", serif;
+    font-size: 16px;
+    text-decoration: none;
+    color: #344051;
+}

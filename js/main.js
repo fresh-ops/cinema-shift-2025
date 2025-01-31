@@ -1,3 +1,18 @@
+const isMobile = window.innerWidth < 768;
+
+function main() {
+    changeHeader();
+    window.addEventListener('resize', adoptLayout, { once: true });
+    showFilms();
+}
+
+function adoptLayout() {
+    changeHeader();
+    if (isMobile === (window.innerWidth < 768)) {
+        window.addEventListener('resize', adoptLayout, { once: true });
+    }
+}
+
 async function showFilms() {
     const films = await getTodayFilms();
     const poster = document.querySelector('#poster');
@@ -7,4 +22,4 @@ async function showFilms() {
     }
 }
 
-showFilms();
+main();
