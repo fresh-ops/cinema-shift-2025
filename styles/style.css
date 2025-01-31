@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    position: fixed;
+    background: white;
+}
+
+
+header>div {
+    width: 80%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+#container {
+    width: 80%;
+    height: 100000px;
+    background: royalblue;
+}
