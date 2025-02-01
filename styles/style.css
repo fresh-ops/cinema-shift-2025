@@ -5,8 +5,6 @@
     box-sizing: border-box;
 }
 
-
-
 header {
     width: 100%;
     display: flex;
@@ -72,9 +70,36 @@ main {
     padding: 8px 0;
 }
 
+.card-button a {
+    color: white;
+    text-decoration: none;
+}
+
+.film {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.film-poster {
+    width: 20%;
+}
+
+.film-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 80%;
+}
+
 @media screen and (min-width: 1200px) {
     #poster {
         grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    }
+
+    .film-poster {
+        height: 300px;
     }
 }
 
@@ -82,16 +107,48 @@ main {
     #poster {
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     }
+
+    .film-poster {
+        height: 250px;
+    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
     #poster {
         grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
     }
+
+    .film-poster {
+        width: 30%;
+        height: 250px;
+    }
+
+    .film-info {
+        width: 70%;
+    }
 }
 
 @media screen and (max-width: 767px) {
     #poster {
         grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+
+    .film-poster {
+        width: 40%;
+    }
+
+    .film-info {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .film {
+        flex-direction: column;
+    }
+
+    .film-poster {
+        width: 100%;
+        height: 400px;
     }
 }

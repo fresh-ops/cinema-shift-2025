@@ -6,7 +6,7 @@ function buildFilmCard(film) {
     card.innerHTML += `
         <div class="card-title"><h3>${film.name}</h3></div>
         <div class="card-rate">Кинопоиск - ${film.userRatings.kinopoisk}</div>
-        <button class="card-button">Подробнее</button>
+        <button class="card-button"><a href="./film.html?film_id=${film.id}">Подробнее</a></button>
     `;
     return card;
 }
