@@ -1,4 +1,19 @@
+header div {
+    gap: 16px;
+    align-items: baseline;
+}
+
 header>div>h1 {
     font-family: "Inter", serif;
     font-size: 24px;
+}
+
+header .backbutton {
+    margin: 0;
+}
+
+header .backbutton button i {
+    color: black;
+    font-size: 24px;
+    margin: 0;
 }

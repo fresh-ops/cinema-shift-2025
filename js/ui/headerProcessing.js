@@ -19,7 +19,8 @@ function buildDesktopHeader() {
 
 function buildMobileHeader() {
     const mobileHeader = document.createElement('div');
-    mobileHeader.innerHTML = `
+    mobileHeader.append(buildBackButton(hasText = false));
+    mobileHeader.innerHTML += `
         <h1>Афиша</h1>
     `;
 
